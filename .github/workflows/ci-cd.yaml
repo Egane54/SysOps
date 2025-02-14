@@ -44,9 +44,12 @@ jobs:
           sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
           
       - name: Debug
-        run: |
-          pwd
-          ls -R
+  run: |
+    echo "Pwd:"
+    pwd
+    echo "Files:"
+    ls -R /home/runner/work/SysOps    # liste tout ce qu'il y a dans /home/runner/work/SysOps
+
 
       - name: Deploy to Kubernetes
         run: |
