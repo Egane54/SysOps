@@ -51,6 +51,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Configure kubeconfig
+        run: |
+          mkdir -p ~/.kube
+          echo "${{ secrets.KUBECONFIG_CONTENT }}" > ~/.kube/config
+          chmod 600 ~/.kube/config
+
+
       - name: Deploy to Kubernetes
         run: |
           kubectl apply -f deployment.yaml
