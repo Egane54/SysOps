@@ -15,12 +15,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Vérifier la présence de Dockerfile
-        run: |
-          pwd
-          ls -l
-          cat Dockerfile || echo "Dockerfile introuvable"
-
       - name: Install dependencies
         run: npm install
 
