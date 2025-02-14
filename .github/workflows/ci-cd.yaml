@@ -1,3 +1,9 @@
+- name: Vérifier la présence de Dockerfile
+  run: |
+    pwd
+    ls -l
+    cat Dockerfile || echo "Dockerfile introuvable"
+    
 name: CI/CD Pipeline
 on:
  push:
