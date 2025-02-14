@@ -52,7 +52,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Configure kubeconfig
-          run: | 
+        run: | 
               mkdir -p ~/.kube
               echo "${{ secrets.KUBECONFIG_CONTENT }}" > ~/.kube/config
               chmod 600 ~/.kube/config
