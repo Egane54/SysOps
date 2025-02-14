@@ -1,6 +1,6 @@
 FROM node:14
 WORKDIR /app
-COPY index.js .
+COPY package.json .
 RUN npm install
 COPY . .
 CMD ["node", "index.js"]
