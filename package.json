@@ -1,0 +1,12 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Vérifier la présence de index.js
+        run: ls -l && cat index.js || echo "index.js introuvable"
+
+      - name: Démarrer le serveur Node.js
+        run: node index.js
