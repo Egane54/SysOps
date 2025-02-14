@@ -48,7 +48,8 @@ jobs:
               echo "=== Recherche de deployment.yaml dans /home/runner/work ==="
               find /home/runner/work -name "deployment.yaml" -exec realpath {} \;
 
-
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Deploy to Kubernetes
         run: |
