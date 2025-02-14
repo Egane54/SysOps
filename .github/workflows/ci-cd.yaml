@@ -45,8 +45,8 @@ jobs:
           
       - name: Debug
         run: |
-        pwd
-        ls -R
+          pwd
+          ls -R
 
       - name: Deploy to Kubernetes
         run: |
